@@ -1,0 +1,2 @@
+include ':sample', ':permissionkit'
+rootProject.name='PermissionKit'

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">permissionKit</string>
+    <string name="tip_permission_title">权限提示</string>
+    <string name="tip_permission_msg_ask">设备运行需要您同意一些权限,否则软件将不能更好的为您服务</string>
+    <string name="tip_permission_msg_setting">设备运行需要您前往设置一些权限,否则软件将不能更好的为您服务</string>
+    <string name="tip_permission_btn_ok">去授权</string>
+    <string name="tip_permission_btn_ok_setting">去设置</string>
+    <string name="tip_permission_btn_cancel">不同意</string>
+</resources>
