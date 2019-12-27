@@ -47,7 +47,7 @@ public class PermissionKit {
      *
      * @return true|false
      */
-    private boolean isM() {
+    public boolean isM() {
         return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M;
     }
 
@@ -97,7 +97,7 @@ public class PermissionKit {
      * @param permissions 所有请求权限
      * @param unAgreeList 未同意的权限
      */
-    void requestPermissionsResult(int requestCode, String[] permissions, List<String> unAgreeList) {
+   public void requestPermissionsResult(int requestCode, String[] permissions, List<String> unAgreeList) {
         int hashCode = Arrays.hashCode(permissions);
         OnPermissionListener listener = listenerSparseArray.get(hashCode);
         if (listener != null) {
@@ -145,7 +145,7 @@ public class PermissionKit {
     }
 
     /**
-     * 引导去设置
+     * 拒绝后引导去设置
      *
      * @param activity     当前Activity
      * @param defaultGuide 是否使用默认引导

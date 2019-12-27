@@ -25,9 +25,6 @@ public class PermissionActivity extends AppCompatActivity implements ActivityCom
      */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (BuildConfig.DEBUG) {
-            Log.e(getClass().getSimpleName(), "请求结果：" + Arrays.toString(grantResults));
-        }
         List<String> unAgreeList = new ArrayList<>();
         for (int i = 0; i < grantResults.length; i++) {
             if (grantResults[i] != PackageManager.PERMISSION_GRANTED) {
