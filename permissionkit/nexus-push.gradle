@@ -1,0 +1,43 @@
+//引入插件
+apply plugin: 'maven'
+//编译 Javadoc
+task androidJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+//编译 xxx-javadoc.jar
+task androidJavadocsJar(type: Jar) {
+    classifier = 'javadoc'
+    from androidJavadocs.destinationDir
+}
+//编译 xxx-sources.jar
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    from android.sourceSets.main.java.srcDirs
+}
+artifacts {
+    archives androidSourcesJar
+    archives androidJavadocsJar
+}
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //配置发布的仓库与账号、密码
+            repository(url: "http://127.0.0.1:8081/repository/maven-releases/") {
+                authentication(userName: "admin", password: "admin123")
+            }
+            //指定id
+            pom.artifactId = 'permissionkit'
+            //指定版本
+            pom.version = '1.0.0'
+            pom.project {
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+            }
+        }
+    }
+}
