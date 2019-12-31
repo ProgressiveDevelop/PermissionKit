@@ -1,14 +1,12 @@
 package com.permission.kit;
 
 import android.content.pm.PackageManager;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**

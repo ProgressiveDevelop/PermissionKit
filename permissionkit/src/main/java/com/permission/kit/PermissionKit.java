@@ -97,7 +97,7 @@ public class PermissionKit {
      * @param permissions 所有请求权限
      * @param unAgreeList 未同意的权限
      */
-   public void requestPermissionsResult(int requestCode, String[] permissions, List<String> unAgreeList) {
+    public void requestPermissionsResult(int requestCode, String[] permissions, List<String> unAgreeList) {
         int hashCode = Arrays.hashCode(permissions);
         OnPermissionListener listener = listenerSparseArray.get(hashCode);
         if (listener != null) {
@@ -167,7 +167,7 @@ public class PermissionKit {
                     if (customGuide != null) {
                         customGuide.againRequest();
                     } else {
-                        throw new NullPointerException("自定义权限处理,onCustomGuide不能为空");
+                        throw new NullPointerException(activity.getResources().getString(R.string.tip_custom_not_null));
                     }
                 }
                 break;
@@ -179,7 +179,7 @@ public class PermissionKit {
                     if (customGuide != null) {
                         customGuide.goSetting();
                     } else {
-                        throw new NullPointerException("自定义权限处理,onCustomGuide不能为空");
+                        throw new NullPointerException(activity.getResources().getString(R.string.tip_custom_not_null));
                     }
                 }
             }
