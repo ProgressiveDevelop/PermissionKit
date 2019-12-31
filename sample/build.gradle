@@ -22,6 +22,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation project(path: ':permissionkit')
+    //implementation project(path: ':permissionkit')
+    //本地测试Nexus
     //implementation 'PermissionKit:permissionkit:1.0.0@aar'
+    //测试 Jcenter仓库
+    implementation 'com.android.kit:permissionkit:1.0.0'
 }

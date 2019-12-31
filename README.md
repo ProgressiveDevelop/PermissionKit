@@ -9,6 +9,10 @@ Android 6.0 最简单的权限工具类,基于Androidx,非注解方式
 |:---:|:---:|:---:|
 |![点击不再询问并拒绝](https://raw.githubusercontent.com/ProgressiveDevelop/PermissionKit/master/screenshot/%E7%82%B9%E5%87%BB%E4%B8%8D%E5%86%8D%E8%AF%A2%E9%97%AE%E5%B9%B6%E6%8B%92%E7%BB%9D.png "点击不再询问并拒绝")|![拒绝并不再询问后提示设置](https://raw.githubusercontent.com/ProgressiveDevelop/PermissionKit/master/screenshot/%E6%8B%92%E7%BB%9D%E5%B9%B6%E4%B8%8D%E5%86%8D%E8%AF%A2%E9%97%AE%E5%90%8E%E6%8F%90%E7%A4%BA%E8%AE%BE%E7%BD%AE.png "拒绝并不再询问后提示设置")|![前往设置界面](https://raw.githubusercontent.com/ProgressiveDevelop/PermissionKit/master/screenshot/%E5%89%8D%E5%BE%80%E8%AE%BE%E7%BD%AE%E7%95%8C%E9%9D%A2.png "前往设置界面")|
 ### 如何使用
+#### 项目module的build.gradle 中添加依赖
+```
+implementation 'com.android.kit:permissionkit:1.0.0'
+```
 #### 第一步，在 AndroidManifest.xml 中添加权限
 ```
     //比如
